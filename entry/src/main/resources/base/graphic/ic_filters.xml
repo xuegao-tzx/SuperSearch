@@ -1,0 +1,12 @@
+<!-- drawable/filter_variant.xml -->
+<vector
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="24vp"
+    ohos:width="24vp"
+    ohos:viewportHeight="24"
+    ohos:viewportWidth="24">
+
+    <path
+        ohos:fillColor="#FFFF0000"
+        ohos:pathData="M6,13H18V11H6M3,6V8H21V6M10,18H14V16H10V18Z"/>
+</vector>

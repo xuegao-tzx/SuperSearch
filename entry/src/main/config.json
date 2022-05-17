@@ -1,0 +1,69 @@
+{
+  "app": {
+    "bundleName": "com.xcl.studyt",
+    "vendor": "tzx",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.xcl.search.test",
+    "name": ".MyApplication",
+    "mainAbility": "com.xcl.search.test.MainAbility",
+    "deviceType": [
+      "phone",
+      "tablet",
+      "tv",
+      "wearable",
+      "car"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "metaData": {
+      "customizeData": [
+        {
+          "name": "hwc-theme",
+          "extra": "",
+          "value": "androidhwext:style/Theme.Emui.Wallpaper.NoTitleBar"
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "visible": true,
+        "name": "com.xcl.search.test.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.xcl.search.test.SearchDemoAbility",
+        "icon": "$media:icon",
+        "description": "$string:searchdemoability_description",
+        "label": "$string:entry_SearchDemoAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}

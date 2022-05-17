@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    xmlns:app="http://schemas.huawei.com/app/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_parent"
+    ohos:background_element="$graphic:background_search_view"
+    ohos:clickable="true"
+    ohos:orientation="vertical">
+
+    <DependentLayout
+        ohos:height="48vp"
+        ohos:width="match_parent">
+
+        <StackLayout
+            ohos:id="$+id:leftContainerFl"
+            ohos:height="48vp"
+            ohos:width="48vp"
+            ohos:align_parent_start="true"
+            >
+
+            <Image
+                ohos:id="$+id:leftBtnIv"
+                ohos:height="match_parent"
+                ohos:width="match_parent"
+                ohos:layout_alignment="center"
+                ohos:padding="11vp"
+                ohos:scale_mode="zoom_center"
+                />
+
+            <com.xcl.supersearch.RoundProgressBar
+                ohos:id="$+id:progressBar"
+                ohos:height="24vp"
+                ohos:width="24vp"
+                ohos:layout_alignment="center"
+                ohos:visibility="hide"
+                app:progress_color="#657786"
+                app:progress_with="2f"
+                />
+
+        </StackLayout>
+
+        <TextField
+            ohos:id="$+id:inputEt"
+            ohos:height="match_parent"
+            ohos:width="match_parent"
+            ohos:bubble_height="0vp"
+            ohos:end_margin="16vp"
+            ohos:end_of="$+id:leftContainerFl"
+            ohos:input_enter_key_type="enter_key_type_search"
+            ohos:multiple_lines="false"
+            ohos:start_margin="13vp"
+            ohos:start_of="$+id:inputBtnsContainerFl"
+            ohos:text_alignment="vertical_center"
+            ohos:text_size="16fp"
+            ohos:text_weight="700"
+            />
+
+        <DirectionalLayout
+            ohos:id="$+id:inputBtnsContainerFl"
+            ohos:height="48vp"
+            ohos:width="match_content"
+            ohos:align_parent_end="true"
+            ohos:orientation="horizontal"
+            >
+
+            <Image
+                ohos:id="$+id:clearInputBtnIv"
+                ohos:height="match_parent"
+                ohos:width="48vp"
+                ohos:layout_alignment="center"
+                ohos:padding="11vp"
+                ohos:scale_mode="zoom_center"
+                ohos:visibility="hide"
+                />
+
+            <Image
+                ohos:id="$+id:imgSearch"
+                ohos:height="match_parent"
+                ohos:width="48vp"
+                ohos:image_src="$graphic:ic_search"
+                ohos:layout_alignment="center"
+                ohos:padding="11vp"
+                ohos:scale_mode="zoom_center"
+                ohos:visibility="hide"
+                />
+
+            <Image
+                ohos:id="$+id:rightBtnIv"
+                ohos:height="match_parent"
+                ohos:width="48vp"
+                ohos:image_src="$graphic:ic_search"
+                ohos:layout_alignment="center"
+                ohos:padding="11vp"
+                ohos:scale_mode="zoom_center"
+                />
+
+        </DirectionalLayout>
+
+    </DependentLayout>
+
+    <DirectionalLayout
+        ohos:id="$+id:suggestionsContainerLl"
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:orientation="vertical"
+        ohos:top_margin="48vp"
+        >
+
+        <Component
+            ohos:id="$+id:divider"
+            ohos:height="0.75vp"
+            ohos:width="match_parent"
+            ohos:background_element="#BCBCBC"/>
+
+        <ListContainer
+            ohos:id="$+id:suggestionsRecyclerView"
+            ohos:height="match_content"
+            ohos:width="match_parent"
+            ohos:scrollbar_background_color="#00000000"/>
+
+    </DirectionalLayout>
+
+</DependentLayout>

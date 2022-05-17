@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "entry_MainAbility"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "searchmr",
+      "value": "搜索默认页面"
+    },
+    {
+      "name": "withoutSug",
+      "value": "无建议搜索"
+    },
+    {
+      "name": "recentSug",
+      "value": "有最近建议搜索"
+    },
+    {
+      "name": "hasknownSug",
+      "value": "有已知建议搜索"
+    },
+    {
+      "name": "suggestion_text",
+      "value": "建议文本"
+    },
+    {
+      "name": "search_hint_text",
+      "value": "搜索..."
+    },
+    {
+      "name": "search_hint_text_",
+      "value": "搜索."
+    },
+    {
+      "name": "search_input_null",
+      "value": "搜索值为空"
+    },
+    {
+      "name": "search_answer_none",
+      "value": "搜索结果为空"
+    },
+    {
+      "name": "entry_SearchDemoAbility",
+      "value": "entry_SearchDemoAbility"
+    },
+    {
+      "name": "searchdemoability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "searchdemoability_HelloWorld",
+      "value": "你好，世界"
+    }
+  ]
+}

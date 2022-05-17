@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "searchmr",
+      "value": "SEARCH DEFAULT PAGE"
+    },
+    {
+      "name": "withoutSug",
+      "value": "NO SUGGESTED SEARCH"
+    },
+    {
+      "name": "recentSug",
+      "value": "HAS RECENT SUGGESTED SEARCHES"
+    },
+    {
+      "name": "hasknownSug",
+      "value": "HAS KNOWN SUGGESTED SEARCHES"
+    },
+    {
+      "name": "suggestion_text",
+      "value": "Suggestion Text"
+    },
+    {
+      "name": "search_hint_text",
+      "value": "Searching..."
+    },
+    {
+      "name": "search_hint_text_",
+      "value": "Search ."
+    },
+    {
+      "name": "search_input_null",
+      "value": "Search Text is Null"
+    },
+    {
+      "name": "search_answer_none",
+      "value": "Search Answer is None"
+    }
+  ]
+}

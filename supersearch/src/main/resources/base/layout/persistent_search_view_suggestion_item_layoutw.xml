@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="22vp"
+    ohos:width="match_parent"
+    ohos:alignment="vertical_center"
+    ohos:orientation="horizontal"
+    >
+
+    <Image
+        ohos:id="$+id:iconIv"
+        ohos:height="20vp"
+        ohos:width="20vp"
+        ohos:padding="1vp"
+        ohos:scale_mode="zoom_center"
+        />
+
+    <Text
+        ohos:id="$+id:textTv"
+        ohos:height="match_parent"
+        ohos:width="0vp"
+        ohos:end_margin="16vp"
+        ohos:max_text_lines="1"
+        ohos:multiple_lines="false"
+        ohos:start_margin="13vp"
+        ohos:text="$string:suggestion_text"
+        ohos:text_alignment="vertical_center"
+        ohos:text_color="#000000"
+        ohos:text_size="13fp"
+        ohos:truncation_mode="ellipsis_at_end"
+        ohos:weight="1"
+        />
+
+    <StackLayout
+        ohos:id="$+id:removeBtnWrapperFl"
+        ohos:height="22vp"
+        ohos:width="22vp"
+        ohos:align_parent_end="true"
+        >
+
+        <Image
+            ohos:id="$+id:removeBtnIv"
+            ohos:height="20vp"
+            ohos:width="20vp"
+            ohos:layout_alignment="center"
+            ohos:padding="1vp"
+            ohos:scale_mode="zoom_center"
+            />
+
+    </StackLayout>
+
+</DirectionalLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_content"
+    ohos:width="match_parent"
+    ohos:orientation="vertical"
+    ohos:padding="1.5vp"
+    >
+
+    <DirectionalLayout
+        ohos:height="match_content"
+        ohos:width="match_parent"
+        ohos:background_element="$graphic:background_list_item"
+        ohos:orientation="horizontal"
+        >
+
+        <DirectionalLayout
+            ohos:height="55vp"
+            ohos:width="match_parent"
+            ohos:alignment="center"
+            ohos:orientation="vertical"
+            ohos:weight="1"
+            >
+
+            <Text
+                ohos:id="$+id:title"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:layout_alignment="center"
+                ohos:text="标题"
+                ohos:text_color="#FF2F2A2A"
+                ohos:text_size="23vp"
+                ohos:weight="2"
+                />
+
+            <Text
+                ohos:id="$+id:message"
+                ohos:height="match_content"
+                ohos:width="match_content"
+                ohos:layout_alignment="center"
+                ohos:text="信息"
+                ohos:text_color="#FF2F2A2A"
+                ohos:text_size="18vp"
+                ohos:weight="1"
+                />
+        </DirectionalLayout>
+
+        <DirectionalLayout
+            ohos:height="55vp"
+            ohos:width="match_parent"
+            ohos:alignment="center"
+            ohos:orientation="horizontal"
+            ohos:weight="2.3"
+            >
+
+            <Button
+                ohos:id="$+id:button1"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:layout_alignment="center"
+                ohos:text="按钮1"
+                ohos:text_color="#EB1F1818"
+                ohos:text_size="20vp"
+                ohos:weight="1"
+                />
+
+            <Button
+                ohos:id="$+id:button2"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:layout_alignment="center"
+                ohos:text="按钮2"
+                ohos:text_color="#EB1F1818"
+                ohos:text_size="20vp"
+                ohos:weight="1"
+                />
+
+            <Button
+                ohos:id="$+id:button3"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:layout_alignment="center"
+                ohos:text="按钮3"
+                ohos:text_color="#EB1F1818"
+                ohos:text_size="20vp"
+                ohos:weight="1"
+                />
+
+            <Button
+                ohos:id="$+id:button4"
+                ohos:height="match_content"
+                ohos:width="match_parent"
+                ohos:layout_alignment="center"
+                ohos:text="按钮4"
+                ohos:text_color="#EB1F1818"
+                ohos:text_size="20vp"
+                ohos:weight="1"
+                />
+        </DirectionalLayout>
+
+    </DirectionalLayout>
+
+    <DirectionalLayout
+        ohos:height="2vp"
+        ohos:width="match_parent"
+        ohos:orientation="horizontal"
+        >
+    </DirectionalLayout>
+</DirectionalLayout>

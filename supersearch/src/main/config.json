@@ -1,0 +1,35 @@
+{
+  "app": {
+    "bundleName": "com.xcl.search",
+    "vendor": "xcl",
+    "version": {
+      "code": 220517,
+      "name": "1.2.3.517"
+    }
+  },
+  "deviceConfig": {
+  },
+  "module": {
+    "package": "com.xcl.supersearch",
+    "deviceType": [
+      "phone",
+      "tablet",
+      "tv",
+      "wearable"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "supersearch",
+      "moduleType": "har"
+    },
+    "metaData": {
+      "customizeData": [
+        {
+          "name": "hwc-theme",
+          "extra": "",
+          "value": "androidhwext:style/Theme.Emui.Wallpaper.NoTitleBar"
+        }
+      ]
+    }
+  }
+}

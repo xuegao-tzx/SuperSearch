@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DependentLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    xmlns:app="http://schemas.huawei.com/app/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:background_element="#F8D4C9C9">
+
+    <ListContainer
+        ohos:id="$+id:ListContainer"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:background_element="#F8D4C9C9"
+        ohos:bottom_padding="43.5vp"
+        ohos:color="#FF4C29CB"
+        ohos:left_padding="26.5vp"
+        ohos:orientation="vertical"
+        ohos:right_padding="26.5vp"
+        ohos:top_padding="60vp"
+        />
+
+    <DirectionalLayout
+        ohos:id="$+id:emptyView"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:center_in_parent="true"
+        ohos:orientation="vertical"
+        >
+
+        <Text
+            ohos:id="$+id:text_back"
+            ohos:height="match_content"
+            ohos:width="match_content"
+            ohos:background_element="$graphic:background_ability_search_demo"
+            ohos:layout_alignment="horizontal_center"
+            ohos:text="$string:searchmr"
+            ohos:text_size="15vp"
+            />
+    </DirectionalLayout>
+
+    <com.xcl.supersearch.RoundProgressBar
+        ohos:id="$id:progressBar"
+        ohos:height="25vp"
+        ohos:width="25vp"
+        ohos:center_in_parent="true"
+        ohos:visibility="hide"
+        app:round_progress_color="#FF82F8EF"
+        app:round_progress_with="3f"
+        />
+
+    <com.xcl.supersearch.SearchView
+        ohos:id="$+id:searchview"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:bottom_padding="40vp"
+        ohos:left_padding="34vp"
+        ohos:right_padding="34vp"
+        ohos:top_padding="35.5vp"
+        ohos:visibility="visible"
+        app:background_mask_color="#75B5D290"
+        app:background_mask_degree="0.35f"
+        app:delete_search_history="$graphic:ic_close"
+        app:isDebugEnabled="true"
+        app:isWearable="true"
+        app:isrightButton_ClearEnabled="true"
+        app:leftButton_Back="$graphic:ic_arrow_left"
+        app:leftButton_Loadding_color="#FF1300FF"
+        app:noneWarnByMySelf="true"
+        app:none_warn_text="$string:search_answer_none"
+        app:none_warn_text_color="#5CFF0000"
+        app:nullWarnByMySelf="true"
+        app:null_warn_text="$string:search_input_null"
+        app:null_warn_text_color="#79FF006E"
+        app:queryInput_background_color="#FFF8F3EC"
+        app:queryInput_buttom_color="#A18770B1"
+        app:queryInput_cursor_color="#FF8377FF"
+        app:queryInput_hint_color="#FFFF0000"
+        app:queryInput_hint_text="$string:search_hint_text"
+        app:queryInput_text_color="#FF6B16FF"
+        app:queryRadius="3vp"
+        app:rightButton_Clear="$graphic:ic_close"
+        app:search_history="$graphic:ic_history_black"
+        app:suggestion_count="6"
+        />
+</DependentLayout>

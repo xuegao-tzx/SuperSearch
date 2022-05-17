@@ -1,0 +1,17 @@
+*.iml
+/.gradle
+/local.properties
+/.idea
+/key
+/material
+/supersearch/build
+/entry/build
+/supersearch/upload.gradle
+/supersearch/gradle.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/entry/.preview
+.cxx
+/node_modules
