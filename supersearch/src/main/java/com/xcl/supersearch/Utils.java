@@ -28,11 +28,31 @@ import ohos.hiviewdfx.HiLogLabel;
 
 import java.util.Optional;
 
+/**
+ * The type Utils.
+ */
 public class Utils {
+    /**
+     * The constant pd_pd.
+     */
     public static boolean pd_pd = false;
+    /**
+     * The constant iswear.
+     */
     public static boolean iswear = false;
+    /**
+     * The Res manager.
+     */
     static ResourceManager resManager;
 
+    /**
+     * Gets boolean.
+     *
+     * @param attrSet      the attr set
+     * @param attrName     the attr name
+     * @param defaultValue the default value
+     * @return the boolean
+     */
     public static boolean getBoolean(AttrSet attrSet, String attrName, boolean defaultValue) {
         if (attrSet == null || attrName == null || attrName.isEmpty()) {
             return defaultValue;
@@ -44,6 +64,14 @@ public class Utils {
         return attrOptional.get().getBoolValue();
     }
 
+    /**
+     * Gets float.
+     *
+     * @param attrSet      the attr set
+     * @param attrName     the attr name
+     * @param defaultValue the default value
+     * @return the float
+     */
     public static float getFloat(AttrSet attrSet, String attrName, float defaultValue) {
         if (attrSet == null || attrName == null || attrName.isEmpty()) {
             return defaultValue;
@@ -55,6 +83,14 @@ public class Utils {
         return attrOptional.get().getFloatValue();
     }
 
+    /**
+     * Gets color.
+     *
+     * @param attrSet      the attr set
+     * @param attrName     the attr name
+     * @param defaultColor the default color
+     * @return the color
+     */
     public static int getColor(AttrSet attrSet, String attrName, int defaultColor) {
         if (attrSet == null || attrName == null || attrName.isEmpty()) {
             return defaultColor;
@@ -67,6 +103,14 @@ public class Utils {
         return attrOptional.get().getColorValue().getValue();
     }
 
+    /**
+     * Gets dimension.
+     *
+     * @param attrSet      the attr set
+     * @param attrName     the attr name
+     * @param defaultValue the default value
+     * @return the dimension
+     */
     public static int getDimension(AttrSet attrSet, String attrName, int defaultValue) {
         if (attrSet == null || attrName == null || attrName.isEmpty()) {
             return defaultValue;
@@ -78,6 +122,14 @@ public class Utils {
         return attrOptional.get().getDimensionValue() * 3;
     }
 
+    /**
+     * Gets element.
+     *
+     * @param attrSet        the attr set
+     * @param attrName       the attr name
+     * @param defaultElement the default element
+     * @return the element
+     */
     public static Element getElement(AttrSet attrSet, String attrName, Element defaultElement) {
         if (attrSet == null || attrName == null || attrName.isEmpty()) {
             return defaultElement;
@@ -89,10 +141,25 @@ public class Utils {
         return attrOptional.get().getElement();
     }
 
+    /**
+     * Vp to px int.
+     *
+     * @param vp                the vp
+     * @param displayAttributes the display attributes
+     * @return the int
+     */
     public static int vpToPx(float vp, DisplayAttributes displayAttributes) {
         return (int) (vp * displayAttributes.densityPixels + 0.5f);
     }
 
+    /**
+     * Gets string.
+     *
+     * @param attrSet      the attr set
+     * @param attrName     the attr name
+     * @param defaultValue the default value
+     * @return the string
+     */
     public static String getString(AttrSet attrSet, String attrName, String defaultValue) {
         if (attrSet == null || attrName == null || attrName.isEmpty()) {
             return defaultValue;
@@ -104,6 +171,12 @@ public class Utils {
         return attrOptional.get().getStringValue();
     }
 
+    /**
+     * Hq string string.
+     *
+     * @param a1 the a 1
+     * @return the string
+     */
     public static String HQString(int a1) {
         try {
             String text = resManager.getElement(a1).getString();
@@ -113,6 +186,13 @@ public class Utils {
         }
     }
 
+    /**
+     * Adjust color alpha element.
+     *
+     * @param color the color
+     * @param alpha the alpha
+     * @return the element
+     */
     public static Element adjustColorAlpha(int color, float alpha) {
         final int alphaChannel = (int) (255 * alpha);
         final int redChannel = (color >> 16) & 0xFF;
@@ -125,30 +205,60 @@ public class Utils {
         return element;
     }
 
+    /**
+     * Info.
+     *
+     * @param label   the label
+     * @param message the message
+     */
     public static void info(HiLogLabel label, String message) {
         if (pd_pd) {
             HiLog.info(label, "信息:[" + message + "]");
         }
     }
 
+    /**
+     * Warn.
+     *
+     * @param label   the label
+     * @param message the message
+     */
     public static void warn(HiLogLabel label, String message) {
         if (pd_pd) {
             HiLog.warn(label, "警告:[" + message + "]");
         }
     }
 
+    /**
+     * Error.
+     *
+     * @param label   the label
+     * @param message the message
+     */
     public static void error(HiLogLabel label, String message) {
         if (pd_pd) {
             HiLog.error(label, "错误:[" + message + "]");
         }
     }
 
+    /**
+     * Debug.
+     *
+     * @param label   the label
+     * @param message the message
+     */
     public static void debug(HiLogLabel label, String message) {
         if (pd_pd) {
             HiLog.debug(label, "调试:[" + message + "]");
         }
     }
 
+    /**
+     * Make press color int.
+     *
+     * @param backgroundColor the background color
+     * @return the int
+     */
     protected int makePressColor(int backgroundColor) {
         int r = (backgroundColor >> 16) & 0xFF;
         int g = (backgroundColor >> 8) & 0xFF;

@@ -23,6 +23,9 @@ import ohos.agp.components.Component;
 import ohos.agp.window.service.WindowManager;
 import ohos.utils.net.Uri;
 
+/**
+ * The type Main ability slice.
+ */
 public class MainAbilitySlice extends AbilitySlice {
 
     @Override
@@ -50,6 +53,11 @@ public class MainAbilitySlice extends AbilitySlice {
         });
     }
 
+    /**
+     * Route.
+     *
+     * @param route the route
+     */
     public void Route(String route) {
         Intent intent1 = new Intent();
         intent1.setParam("SEARCH_PD", route);

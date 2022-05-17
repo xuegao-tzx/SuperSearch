@@ -20,6 +20,9 @@ import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
 import ohos.agp.window.service.WindowManager;
 
+/**
+ * The type Search demo ability.
+ */
 public class SearchDemoAbility extends Ability {
     @Override
     public void onStart(Intent intent) {

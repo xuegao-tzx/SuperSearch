@@ -31,6 +31,9 @@ import ohos.hiviewdfx.HiLogLabel;
 
 import static com.xcl.supersearch.Utils.*;
 
+/**
+ * The type Round progress bar.
+ */
 public class RoundProgressBar extends Component implements Component.DrawTask {
     private static final HiLogLabel label = new HiLogLabel(HiLog.LOG_APP, 0x00234, "RoundProgressBar");
     private final DisplayAttributes displayAttributes;
@@ -42,14 +45,32 @@ public class RoundProgressBar extends Component implements Component.DrawTask {
     private Paint arcPaint;
     private float STROKE_WITH_VP = 3f;
 
+    /**
+     * Instantiates a new Round progress bar.
+     *
+     * @param context the context
+     */
     public RoundProgressBar(Context context) {
         this(context, null);
     }
 
+    /**
+     * Instantiates a new Round progress bar.
+     *
+     * @param context the context
+     * @param attrSet the attr set
+     */
     public RoundProgressBar(Context context, AttrSet attrSet) {
         this(context, attrSet, "");
     }
 
+    /**
+     * Instantiates a new Round progress bar.
+     *
+     * @param context   the context
+     * @param attrSet   the attr set
+     * @param styleName the style name
+     */
     public RoundProgressBar(Context context, AttrSet attrSet, String styleName) {
         super(context, attrSet, styleName);
         DisplayManager displayManager = DisplayManager.getInstance();
@@ -60,6 +81,9 @@ public class RoundProgressBar extends Component implements Component.DrawTask {
         initPaint();
     }
 
+    /**
+     * Init paint.
+     */
     protected void initPaint() {
         try {
             arcPaint = new Paint();
@@ -70,6 +94,11 @@ public class RoundProgressBar extends Component implements Component.DrawTask {
         }
     }
 
+    /**
+     * Sets attributes.
+     *
+     * @param attrs the attrs
+     */
     protected void setAttributes(AttrSet attrs) {
         try {
             setMinHeight(vpToPx(32, displayAttributes));
@@ -119,6 +148,11 @@ public class RoundProgressBar extends Component implements Component.DrawTask {
         }
     }
 
+    /**
+     * Sets background color.
+     *
+     * @param color the color
+     */
     public void setBackgroundColor(int color) {
         backgroundColor = color;
         getContext().getUITaskDispatcher().asyncDispatch(this::invalidate);

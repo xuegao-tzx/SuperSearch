@@ -35,6 +35,9 @@ import java.util.function.Predicate;
 
 import static com.xcl.supersearch.Utils.*;
 
+/**
+ * The type Search view.
+ */
 public class SearchView extends DependentLayout implements Component.BindStateChangedListener, ContactProviderSR.AdapterClickListener {
     private static final HiLogLabel label = new HiLogLabel(HiLog.LOG_APP, 0x00234, "SearchView");
     private static final float DEFAULT_DIM_AMOUNT = 0.5f;
@@ -179,14 +182,32 @@ public class SearchView extends DependentLayout implements Component.BindStateCh
         }
     };
 
+    /**
+     * Instantiates a new Search view.
+     *
+     * @param context the context
+     */
     SearchView(Context context) {
         this(context, null);
     }
 
+    /**
+     * Instantiates a new Search view.
+     *
+     * @param context the context
+     * @param attrSet the attr set
+     */
     public SearchView(Context context, AttrSet attrSet) {
         this(context, attrSet, "");
     }//TODO:修饰符务必为public
 
+    /**
+     * Instantiates a new Search view.
+     *
+     * @param context   the context
+     * @param attrSet   the attr set
+     * @param styleName the style name
+     */
     public SearchView(Context context, AttrSet attrSet, String styleName) {
         super(context, attrSet, styleName);
         resManager = context.getResourceManager();
@@ -629,6 +650,18 @@ public class SearchView extends DependentLayout implements Component.BindStateCh
         Utils.debug(label, SuggestionList.size() + "个搜索记录");
     }
 
+    /**
+     * Onsearch.
+     *
+     * @param contex       the contex
+     * @param ListContai   the list contai
+     * @param sv           the sv
+     * @param backComponen the back componen
+     * @param pgb          the pgb
+     * @param cslist       the cslist
+     * @param suggestions  the suggestions
+     * @param ishow        the ishow
+     */
     public void Onsearch(Context contex, ListContainer ListContai, SearchView sv, Component backComponen, RoundProgressBar pgb, List<SRContactor> cslist, List<SHistoryContactor> suggestions, boolean ishow) {
         try {
             context = contex;
@@ -658,36 +691,78 @@ public class SearchView extends DependentLayout implements Component.BindStateCh
         }
     }
 
+    /**
+     * Sets context.
+     *
+     * @param contex the contex
+     * @return the context
+     */
     public SearchView setContext(Context contex) {
         context = contex;
         return Builder();
     }
 
+    /**
+     * Sets round progress bar.
+     *
+     * @param pgb the pgb
+     * @return the round progress bar
+     */
     public SearchView setRoundProgressBar(RoundProgressBar pgb) {
         RoundPB = pgb;
         return Builder();
     }
 
+    /**
+     * Sets search view.
+     *
+     * @param sv the sv
+     * @return the search view
+     */
     public SearchView setSearchView(SearchView sv) {
         SV = sv;
         return Builder();
     }
 
+    /**
+     * Sets sr list container.
+     *
+     * @param cslist the cslist
+     * @return the sr list container
+     */
     public SearchView setSRListContainer(List<SRContactor> cslist) {
         CXList = cslist;
         return Builder();
     }
 
+    /**
+     * Sets suggestionis show.
+     *
+     * @param ishow the ishow
+     * @return the suggestionis show
+     */
     public SearchView setSuggestionisShow(boolean ishow) {
         isShow = ishow;
         return Builder();
     }
 
+    /**
+     * Sets back component.
+     *
+     * @param BackComponent the back component
+     * @return the back component
+     */
     public SearchView setBackComponent(Component BackComponent) {
         backComponent = BackComponent;
         return Builder();
     }
 
+    /**
+     * Sets list container.
+     *
+     * @param ListContai the list contai
+     * @return the list container
+     */
     public SearchView setListContainer(ListContainer ListContai) {
         CPSR = new ContactProviderSR(context);
         CPSR.setAdapterClickListener(this);
@@ -701,11 +776,22 @@ public class SearchView extends DependentLayout implements Component.BindStateCh
         return Builder();
     }
 
+    /**
+     * Sets suggestion list.
+     *
+     * @param suggestions the suggestions
+     * @return the suggestion list
+     */
     public SearchView setSuggestionList(List<SHistoryContactor> suggestions) {
         SuggestionList = suggestions;
         return Builder();
     }
 
+    /**
+     * Builder search view.
+     *
+     * @return the search view
+     */
     public SearchView Builder() {
         Utils.debug(SearchView.label, "Builder");
         if (isShow) {
@@ -717,6 +803,17 @@ public class SearchView extends DependentLayout implements Component.BindStateCh
         return this;
     }
 
+    /**
+     * Onsearch.
+     *
+     * @param contex       the contex
+     * @param ListContai   the list contai
+     * @param sv           the sv
+     * @param backComponen the back componen
+     * @param pgb          the pgb
+     * @param cslist       the cslist
+     * @param ishow        the ishow
+     */
     public void Onsearch(Context contex, ListContainer ListContai, SearchView sv, Component backComponen, RoundProgressBar pgb, List<SRContactor> cslist, boolean ishow) {
         try {
             context = contex;
@@ -745,6 +842,16 @@ public class SearchView extends DependentLayout implements Component.BindStateCh
         }
     }
 
+    /**
+     * Onsearch.
+     *
+     * @param contex       the contex
+     * @param ListContai   the list contai
+     * @param sv           the sv
+     * @param backComponen the back componen
+     * @param pgb          the pgb
+     * @param cslist       the cslist
+     */
     public void Onsearch(Context contex, ListContainer ListContai, SearchView sv, Component backComponen, RoundProgressBar pgb, List<SRContactor> cslist) {
         try {
             context = contex;
@@ -786,6 +893,11 @@ public class SearchView extends DependentLayout implements Component.BindStateCh
 
     }
 
+    /**
+     * Sets back click listener.
+     *
+     * @param backClickListener the back click listener
+     */
     public void setBackClickListener(BackClickListener backClickListener) {
         this.backClickListener = backClickListener;
     }
@@ -794,50 +906,110 @@ public class SearchView extends DependentLayout implements Component.BindStateCh
         this.searchListener = searchListener;
     }
 
+    /**
+     * Sets custom listener.
+     *
+     * @param customlistener the customlistener
+     */
     public void setCustomListener(CustomListener customlistener) {
         customListener = customlistener;
     }
 
+    /**
+     * Sets bt 1 listener.
+     *
+     * @param B1L the b 1 l
+     */
     public void setBt1Listener(Bt1Listener B1L) {
         bt1Listener = B1L;
     }
 
+    /**
+     * Sets bt 2 listener.
+     *
+     * @param B2L the b 2 l
+     */
     public void setBt2Listener(Bt2Listener B2L) {
         bt2Listener = B2L;
     }
 
+    /**
+     * Sets bt 3 listener.
+     *
+     * @param B3L the b 3 l
+     */
     public void setBt3Listener(Bt3Listener B3L) {
         bt3Listener = B3L;
     }
 
+    /**
+     * Sets bt 4 listener.
+     *
+     * @param B4L the b 4 l
+     */
     public void setBt4Listener(Bt4Listener B4L) {
         bt4Listener = B4L;
     }
 
+    /**
+     * Sets null warn listener.
+     *
+     * @param nullWarn the null warn
+     */
     public void setNullWarnListener(NullWarnListener nullWarn) {
         nullWarnListener = nullWarn;
     }
 
+    /**
+     * Sets none warn listener.
+     *
+     * @param noneWarn the none warn
+     */
     public void setNoneWarnListener(NoneWarnListener noneWarn) {
         noneWarnListener = noneWarn;
     }
 
+    /**
+     * Sets remove listener.
+     *
+     * @param removeListener the remove listener
+     */
     public void setRemoveListener(RemoveListener removeListener) {
         this.removeListener = removeListener;
     }
 
+    /**
+     * Is expand boolean.
+     *
+     * @return the boolean
+     */
     public boolean isExpand() {
         return state == State.EXPANDED;
     }
 
+    /**
+     * Show search view.
+     */
     public void showSearchView() {
         startExpandAnimation(true);
     }
 
+    /**
+     * Hide search view.
+     */
     public void hideSearchView() {
         startExpandAnimation(false);
     }
 
+    /**
+     * On scroll.
+     *
+     * @param component  the component
+     * @param scrollX    the scroll x
+     * @param scrollY    the scroll y
+     * @param oldScrollX the old scroll x
+     * @param oldScrollY the old scroll y
+     */
     public void onScroll(Component component, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
         if (InputSearchText.hasFocus()) {
             InputSearchText.clearFocus();
@@ -868,57 +1040,148 @@ public class SearchView extends DependentLayout implements Component.BindStateCh
 
 
     private enum State {
+        /**
+         * Expanded state.
+         */
         EXPANDED,
+        /**
+         * Collapsed state.
+         */
         COLLAPSED
     }
 
+    /**
+     * The interface Back click listener.
+     */
     public interface BackClickListener {
+        /**
+         * On back click.
+         */
         void onBackClick();
     }
 
+    /**
+     * The interface Search listener.
+     */
     public interface SearchListener {
+        /**
+         * On search.
+         *
+         * @param search the search
+         */
         void onSearch(String search);
     }
 
+    /**
+     * The interface Custom listener.
+     */
     public interface CustomListener {
+        /**
+         * On filter.
+         *
+         * @param filter the filter
+         */
         void onFilter(String filter);
     }
 
+    /**
+     * The interface Bt 1 listener.
+     */
     public interface Bt1Listener {
+        /**
+         * Onb t 1.
+         *
+         * @param position the position
+         */
         void onbT1(int position);
     }
 
+    /**
+     * The interface Bt 2 listener.
+     */
     public interface Bt2Listener {
+        /**
+         * Onb t 2.
+         *
+         * @param position the position
+         */
         void onbT2(int position);
     }
 
+    /**
+     * The interface Bt 3 listener.
+     */
     public interface Bt3Listener {
+        /**
+         * Onb t 3.
+         *
+         * @param position the position
+         */
         void onbT3(int position);
     }
 
+    /**
+     * The interface Bt 4 listener.
+     */
     public interface Bt4Listener {
+        /**
+         * Onb t 4.
+         *
+         * @param position the position
+         */
         void onbT4(int position);
     }
 
+    /**
+     * The interface Null warn listener.
+     */
     public interface NullWarnListener {
+        /**
+         * On null error.
+         */
         void onNullError();
     }
 
+    /**
+     * The interface None warn listener.
+     */
     public interface NoneWarnListener {
+        /**
+         * On null warn.
+         */
         void onNullWarn();
     }
 
+    /**
+     * The interface Remove listener.
+     */
     public interface RemoveListener {
+        /**
+         * On remove history.
+         *
+         * @param position   the position
+         * @param suggestion the suggestion
+         */
         void onRemoveHistory(int position, SHistoryContactor suggestion);
     }
 
     private class HistoryProvider extends BaseItemProvider {
         private List<SHistoryContactor> mData;
 
+        /**
+         * Instantiates a new History provider.
+         *
+         * @param data the data
+         */
         HistoryProvider(List<SHistoryContactor> data) {
             mData = data;
         }
 
+        /**
+         * Sets data.
+         *
+         * @param mData the m data
+         */
         void setData(List<SHistoryContactor> mData) {
             this.mData = mData;
         }

@@ -26,17 +26,31 @@ import java.util.List;
 import static com.xcl.supersearch.Utils.iswear;
 
 
+/**
+ * The type Contact provider sr.
+ */
 public class ContactProviderSR extends BaseItemProvider {
     private static final HiLogLabel label = new HiLogLabel(HiLog.LOG_APP, 0x00666, "ContactProviderSR");
     private final Context context;
     private List<SRContactor> contactArrays = new ArrayList<>(0);
     private AdapterClickListener adapterClickListener;
 
+    /**
+     * Instantiates a new Contact provider sr.
+     *
+     * @param context       the context
+     * @param contactArrays the contact arrays
+     */
     public ContactProviderSR(Context context, List<SRContactor> contactArrays) {
         this.context = context;
         this.contactArrays = contactArrays;
     }
 
+    /**
+     * Instantiates a new Contact provider sr.
+     *
+     * @param context the context
+     */
     public ContactProviderSR(Context context) {
         this.context = context;
     }
@@ -151,21 +165,54 @@ public class ContactProviderSR extends BaseItemProvider {
         return component;
     }
 
+    /**
+     * Sets adapter click listener.
+     *
+     * @param adapterClickListener the adapter click listener
+     */
     void setAdapterClickListener(AdapterClickListener adapterClickListener) {
         this.adapterClickListener = adapterClickListener;
     }
 
+    /**
+     * Sets data.
+     *
+     * @param listData the list data
+     */
     public void setData(List<SRContactor> listData) {
         contactArrays = listData;
     }
 
+    /**
+     * The interface Adapter click listener.
+     */
     public interface AdapterClickListener {
+        /**
+         * Ann 1.
+         *
+         * @param position the position
+         */
         void ann1(int position);
 
+        /**
+         * Ann 2.
+         *
+         * @param position the position
+         */
         void ann2(int position);
 
+        /**
+         * Ann 3.
+         *
+         * @param position the position
+         */
         void ann3(int position);
 
+        /**
+         * Ann 4.
+         *
+         * @param position the position
+         */
         void ann4(int position);
     }
 

@@ -20,6 +20,9 @@ import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
 import ohos.agp.window.service.WindowManager;
 
+/**
+ * The type Main ability.
+ */
 public class MainAbility extends Ability {
     @Override
     public void onStart(Intent intent) {

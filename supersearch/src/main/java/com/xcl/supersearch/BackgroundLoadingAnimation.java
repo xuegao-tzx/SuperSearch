@@ -21,6 +21,9 @@ import ohos.agp.animation.AnimatorValue;
 import ohos.agp.components.ComponentContainer;
 import ohos.agp.components.element.Element;
 
+/**
+ * The type Background loading animation.
+ */
 public final class BackgroundLoadingAnimation {
     private boolean isRecycled;
 
@@ -31,6 +34,13 @@ public final class BackgroundLoadingAnimation {
 
     private AnimatorValue animator;
 
+    /**
+     * Instantiates a new Background loading animation.
+     *
+     * @param view      the view
+     * @param fromAlpha the from alpha
+     * @param toAlpha   the to alpha
+     */
     public BackgroundLoadingAnimation(ComponentContainer view, float fromAlpha, float toAlpha) {
         this.view = view;
         this.fromAlpha = fromAlpha;
@@ -81,30 +91,57 @@ public final class BackgroundLoadingAnimation {
         });
     }
 
+    /**
+     * Sets from alpha.
+     *
+     * @param fromAlpha the from alpha
+     * @return the from alpha
+     */
     public BackgroundLoadingAnimation setFromAlpha(float fromAlpha) {
         this.fromAlpha = fromAlpha;
         return this;
     }
 
 
+    /**
+     * Sets to alpha.
+     *
+     * @param toAlpha the to alpha
+     * @return the to alpha
+     */
     public BackgroundLoadingAnimation setToAlpha(float toAlpha) {
         this.toAlpha = toAlpha;
         return this;
     }
 
 
+    /**
+     * Sets interpolator.
+     *
+     * @param interpolator the interpolator
+     * @return the interpolator
+     */
     public BackgroundLoadingAnimation setInterpolator(int interpolator) {
         animator.setCurveType(interpolator);
         return this;
     }
 
 
+    /**
+     * Sets duration.
+     *
+     * @param duration the duration
+     * @return the duration
+     */
     public BackgroundLoadingAnimation setDuration(long duration) {
         animator.setDuration(duration);
         return this;
     }
 
 
+    /**
+     * Start.
+     */
     public void start() {
         if (isRecycled() || view.getAlpha() == toAlpha) {
             return;
@@ -115,6 +152,9 @@ public final class BackgroundLoadingAnimation {
     }
 
 
+    /**
+     * Stop.
+     */
     public void stop() {
         if (!isRecycled() && isRunning()) {
             animator.cancel();
@@ -122,11 +162,19 @@ public final class BackgroundLoadingAnimation {
     }
 
 
+    /**
+     * Is running boolean.
+     *
+     * @return the boolean
+     */
     public boolean isRunning() {
         return animator.isRunning();
     }
 
 
+    /**
+     * Recycle.
+     */
     public void recycle() {
         if (isRecycled) {
             return;
@@ -138,6 +186,11 @@ public final class BackgroundLoadingAnimation {
     }
 
 
+    /**
+     * Is recycled boolean.
+     *
+     * @return the boolean
+     */
     public boolean isRecycled() {
         return isRecycled;
     }

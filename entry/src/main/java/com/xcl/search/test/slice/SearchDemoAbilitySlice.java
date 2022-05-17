@@ -33,6 +33,9 @@ import ohos.hiviewdfx.HiLogLabel;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Search demo ability slice.
+ */
 public class SearchDemoAbilitySlice extends AbilitySlice {
     private static final HiLogLabel label = new HiLogLabel(HiLog.LOG_APP, 0x00234, "SearchDemoAbilitySlice");
     private int PDD = -2;
