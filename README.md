@@ -14,7 +14,7 @@
 6. 支持多设备使用
 7. 支持开箱即用
 
-### 安装教程
+### 使用教程
 
 - 方法一：
 
@@ -245,6 +245,17 @@ dependencies {
         }
     });
 ```
+
+###### 混淆配置
+由于涉及自定义组件，请不要混淆本组件，否则会导致组件无法使用
+```groovy
+-keep enum com.xcl.supersearch.**
+-keep class com.xcl.supersearch.**{*;}
+-keep class com.xcl.supersearch.**
+-keepclassmembers enum com.xcl.supersearch.**{*;}
+-keep interface com.xcl.supersearch.**
+```
+
 
 #### - 使用ImageTracerJava工具
 
